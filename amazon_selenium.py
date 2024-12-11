@@ -22,12 +22,9 @@ class Amazon:
             "https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies/ref=zg_bs_nav_pet-supplies_0"
         )
 
-        # Locate the items
         items = self.driver.find_elements(By.ID, "gridItemRoot")
 
-        # Iterate over items and print titles
         for item in items:
-            # Locate the title within each item
             try:
                 title_element = item.find_element(
                     By.CLASS_NAME, "_cDEzb_p13n-sc-css-line-clamp-3_g3dy1")
