@@ -41,3 +41,19 @@ def test_divide():
 ])
 def test_add(a, b, expected):
     assert add(a, b) == expected
+
+
+# ---------- SETUP/TEARDOWNS
+
+
+class TestAdd:
+
+    def setup_method(self):
+        print('BEFORE')
+
+    def test_method(self):
+        print('DURING')
+        assert 0 == 0
+
+    def teardown_method(self):
+        print('AFTER')
